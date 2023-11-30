@@ -1,0 +1,85 @@
+*{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    }
+
+    .wrapper {
+        width: 370px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+        padding: 2rem;
+    }
+
+    h1 {
+        margin: 0 0 1rem 0;
+        text-align: center;
+        color: rgb(5, 119, 5);
+        border-bottom: 6px dotted rgb(202, 220, 207);
+    }
+
+    form {
+        line-height: 2;
+    }
+
+    label {
+        color:rgb(2, 78, 2);
+    }
+
+    input[type="email"], [type="password"], [type="text"] {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 1px 1px 3px 3px rgba(136, 17, 17, 0.05);
+        padding-top: 1rem;
+    }
+
+    .checkbox {
+        padding: 1rem 0;
+    }
+
+    .gender, .country {
+        padding: 0.5rem 0;        
+    }
+
+    input[type="radio"] + label {
+        font-size: 14px;
+        padding-right: 0.5rem;
+    }
+
+    input:focus {
+        border-bottom: 2px solid #338558;
+        background-color: #d5e1db;
+    }
+
+    select {
+        background-color: rgb(232, 231, 231);
+        border-radius: 3px;
+        width: 100%;
+        border: none;
+        box-shadow: 1px 1px 3px 3px rgba(136, 17, 17, 0.03);
+        padding: 0.5rem;
+    }
+
+    .button {
+        font-size: 18px;
+        background-color: rgb(5, 119, 5);
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        width: 100%;
+        box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.2);
+    }
+
+    .button:hover {
+        background-color: rgb(53, 103, 53);
+        cursor: pointer;
+    }
+
+   
+
+
+
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    </style>
+</head>
+<body>
+    <body>
+        <div class="wrapper">
+        <h1 class="form-title">Registration Form</h1>
+        <form>
+            <label for="fname">First Name</label> <br>
+            <input type="text" name="fname" id="fname" required> <br>
+            <label for="lname">Last Name</label> <br>
+            <input type="text" name="lname" id="lname" required><br>
+
+            <label for="email">Enter your email</label> <br>
+            <input type="email" name="email" id="email" required> <br>
+
+            <label for="pwd">Enter your password</label> <br>
+            <input type="password" name="pwd" id="pwd" required> <br>
+            <label for="confpwd">Please confirm password</label> <br>
+            <input type="password" name="confpwd" id="confpwd" required> <br>
+
+            <div class="gender">
+            <label id="gender">Gender</label> <br>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Other</label> <br>
+            </div>
+
+            <div class="country">
+            <label for="title">Country</label> <br>
+            <select id="title">
+                <option value="select">--- Select ---</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Germany">Germany</option>
+                <option value="Norway">Norway</option>
+            </select> <br>
+        </div>
+            
+            <div class="checkbox">
+            <input type="checkbox" name="agree" id="" required>
+            <label for="agree">I have read terms and conditions</label> <br>  
+            </div>
+
+            <input type="submit" value="Submit" class="button">
+
+        </form>
+        </div>
+      
+</body>
+</html>
