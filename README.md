@@ -2,4 +2,5 @@
 
 Navbar - Three types of Navbars using display:flex  
 Forms - Registration Form, Login Form  
-Counter - A simple counter with functions to increment, decrement and reset the counter
+Counter - A simple counter with functions to increment, decrement and reset the counter  
+Countdown - A countdown timer webpage designed to display the remaining time until a specific event  
