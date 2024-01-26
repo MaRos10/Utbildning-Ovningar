@@ -1,0 +1,52 @@
+body {
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #376b4f, #afc7bb);
+    color: white;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    letter-spacing: 1px;
+    color: #d9ede4;
+  }
+  
+  #countdown {
+    background: #3a5a42;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  #timer {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  
+  .timer-unit {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    #timer {
+        font-size: 2rem;
+    }
+    .timer-unit {
+        font-size: 1rem;
+    }
+  }
