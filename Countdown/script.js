@@ -1,4 +1,4 @@
-const targetDate = new Date('2024-12-24T00:00:00'); 
+const targetDate = new Date('2024-12-16T00:00:00'); 
 
 function updateCountdown() {
   const currentTime = new Date();
@@ -16,7 +16,7 @@ function updateCountdown() {
 
   if (difference < 0) {
       clearInterval(interval);
-      document.getElementById("timer").innerText = "The event has started!";
+      document.getElementById("timer").innerText = "LIA has started!";
   }
 }
 
