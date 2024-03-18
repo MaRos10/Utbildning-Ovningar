@@ -13,16 +13,20 @@ function guessNumber(userGuess) {
 
     if (userGuess < number) {
         messageElement.innerText = "För lågt!";
+        messageElement.style.color = "blue";
         setTimeout(function() {
             document.getElementById('user-guess').value = '';
         }, 1000); 
     } else if (userGuess > number) {
         messageElement.innerText = "För högt!";
+        messageElement.style.color = "orange";
         setTimeout(function() {
             document.getElementById('user-guess').value = '';
         }, 1000); 
     } else if (userGuess == number) {
         messageElement.innerText = "Grattis, du gissade rätt!";
+        messageElement.style.color = "green";
+        messageElement.style.fontSize = "2rem";
     }
 }
 
@@ -56,13 +60,15 @@ userGuessInput.addEventListener('keypress', function(event) {
 });
 
 
-// Funktion för att nollställa antal gissningar + senaste gissning vid klick på 'Börja om'-knappen
+// Funktion för att nollställa spelet
 let resetButton = document.getElementById('reset-button');
 
 resetButton.addEventListener('click', resetCounter);
 
 function resetCounter() {
+    guessCount = 0;
     document.getElementById('guess-count').innerText = "0";
     document.getElementById('user-guess').value = '';
+    document.getElementById('message').innerText = '';
 };
 
