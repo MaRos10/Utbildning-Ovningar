@@ -14,12 +14,12 @@ function guessNumber(userGuess) {
     if (userGuess < number) {
         messageElement.innerText = "För lågt!";
         setTimeout(function() {
-            document.getElementById("user-guess").value = '';
+            document.getElementById('user-guess').value = '';
         }, 1000); 
     } else if (userGuess > number) {
         messageElement.innerText = "För högt!";
         setTimeout(function() {
-            document.getElementById("user-guess").value = '';
+            document.getElementById('user-guess').value = '';
         }, 1000); 
     } else if (userGuess == number) {
         messageElement.innerText = "Grattis, du gissade rätt!";
@@ -49,10 +49,20 @@ function makeGuess() {
 // Eventlistener för Enter-knappen
 let userGuessInput = document.getElementById('user-guess');
 
-userGuessInput.addEventListener("keypress", function(event) {
+userGuessInput.addEventListener('keypress', function(event) {
     if (event.key === "Enter") {
         makeGuess();
     }
 });
 
+
+// Funktion för att nollställa antal gissningar + senaste gissning vid klick på 'Börja om'-knappen
+let resetButton = document.getElementById('reset-button');
+
+resetButton.addEventListener('click', resetCounter);
+
+function resetCounter() {
+    document.getElementById('guess-count').innerText = "0";
+    document.getElementById('user-guess').value = '';
+};
 
