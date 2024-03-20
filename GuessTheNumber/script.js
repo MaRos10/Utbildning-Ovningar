@@ -11,6 +11,15 @@ let number = randomNumber(1, 100);
 function guessNumber(userGuess) {
     let messageElement = document.getElementById('message');
 
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+        messageElement.innerText = "Ange en giltig gissning mellan 1 och 100";
+        messageElement.style.color = "red";
+        setTimeout(function() {
+            document.getElementById('user-guess').value = '';
+        }, 1000); 
+        return;
+    }
+
     if (userGuess < number) {
         messageElement.innerText = "För lågt!";
         messageElement.style.color = "blue";
@@ -70,5 +79,6 @@ function resetCounter() {
     document.getElementById('guess-count').innerText = "0";
     document.getElementById('user-guess').value = '';
     document.getElementById('message').innerText = '';
+    document.getElementById('message').style.fontSize = ''
 };
 
