@@ -8,19 +8,50 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: #6D483F;
+
 }
 
 #wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    gap: 1rem; 
+}
+
+.box {
+    background-color: #c7ebea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 5rem;
+    border-radius: 10%;
 }
 
 h3 {
     font-family: "Madimi One", sans-serif;
     font-size: 2.5rem;
-    color: rgb(70, 16, 120);
+    color: #b26224;
+}
+
+button {
+    padding: 0.7rem 1.7rem;
+    border-radius: 10px;
+    border: 1px solid rgb(211, 206, 206);
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #cfd2d6;
+    }
+}
+
+input {
+    border: 1px solid rgb(211, 206, 206);
+    margin-bottom: 2rem;
+    height: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
 }
