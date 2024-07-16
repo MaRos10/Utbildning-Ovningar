@@ -13,4 +13,6 @@ Countdown - En webbsida med nedräkningstimer designad för att visa återståen
 
 Counter - En enkel räknare med funktioner för att öka, minska och återställa räknaren  
 
-GuessTheNumber - Ett enkelt spel där användaren gissar ett slumpmässigt tal mellan 1 och 100. Användaren kan mata in sin gissning och sedan ges feedback om gissningen är för hög, för låg eller korrekt. Antalet gissningar räknas och visas för användaren. Det finns också en funktion för att återställa spelet till sitt ursprungliga tillstånd
+GuessTheNumber - Ett enkelt spel där användaren gissar ett slumpmässigt tal mellan 1 och 100. Användaren kan mata in sin gissning och sedan ges feedback om gissningen är för hög, för låg eller korrekt. Antalet gissningar räknas och visas för användaren. Det finns också en funktion för att återställa spelet till sitt ursprungliga tillstånd  
+
+LiveClock - En analog klockapplikation som visar aktuell tid med rörliga tim-, minut- och sekundvisare
