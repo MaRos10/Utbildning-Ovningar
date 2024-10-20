@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 4;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -8,6 +8,18 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
+
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1; // genererar slumpad siffra mellan 1 och 13
+
+  if (randomNumber > 10) {
+    return 10;
+  } else if (randomNumber === 1) {
+    return 11;
+  } else {
+    return randomNumber;
+  }
+}
 
 function startGame() {
   renderGame();
@@ -34,9 +46,8 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = 6;
+  let card = getRandomCard();
   sum += card;
-  // Push the card to the cards array
   cards.push(card);
   console.log(cards);
   renderGame();
