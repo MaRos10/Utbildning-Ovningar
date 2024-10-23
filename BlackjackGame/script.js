@@ -68,3 +68,13 @@ function newCard() {
     renderGame();
   }
 }
+
+function resetGame() {
+  cards = [];
+  sum = 0;
+  cardsEl.textContent = "Cards: ";
+  sumEl.textContent = "Sum: ";
+  messageEl.textContent = "Want to play a round?";
+  isAlive = false;
+  hasBlackJack = false;
+}
