@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "IM Fell English SC", serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #8b5a2b;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px #dcdcdc;
+}
+
+#insult {
+  background-color: #fff8e1;
+  border: 2px solid #8b5a2b;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.2em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#play {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+#insultButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Garamond", serif;
+  color: #fff;
+  background-color: #8b5a2b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#insultButton:hover {
+  background-color: #6f4c3e;
+}
