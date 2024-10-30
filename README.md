@@ -22,4 +22,6 @@
 <br>
 
 ###  TypeScript
-*DoggyDaycare* - Övning i att använda interfaces. Hämtar information om hundar från ett API och sorterar datan för att visa en lista av unika hundägare samt detaljer om varje hund på en webbsida
+*DoggyDaycare* - Övning i att använda interfaces. Hämtar information om hundar från ett API och sorterar datan för att visa en lista av unika hundägare samt detaljer om varje hund på en webbsida  
+
+*ShakespeareInsultGenerator* - Visar slumpmässigt förolämpningar från medeltida pjäser. Användaren kan klicka på en knapp för att se en ny förolämpning, och när alla förolämpningar har visats, återställs listan så att användaren kan börja om
