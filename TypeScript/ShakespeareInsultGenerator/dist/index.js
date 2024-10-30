@@ -1,4 +1,4 @@
-const insults = [
+let insults = [
     {
         insult: "Were such things here as we do speak about? Or have we eaten on the insane root That takes the reason prisoner?",
         play: "Macbeth",
@@ -40,7 +40,6 @@ const insults = [
         play: "Romeo and Juliet",
     },
 ];
-// console.log(insults);
 // Hämtar HTML-element
 const insult = document.getElementById("insult");
 const play = document.getElementById("play");
@@ -49,12 +48,31 @@ function getRandomInsult() {
     const randomInsult = insults[Math.floor(Math.random() * insults.length - 1)];
     return randomInsult;
 }
-// Funktion som visar den slumpmässiga förolämpningen på sidan
+// Funktion som visar den slumpmässiga förolämpningen
+// LevelUp - ta bort varje slumpad förolämpning från arrayen och återställ arrayen när alla är visade
+let copiedInsults = [...insults];
 function displayRandomInsult() {
-    const insultObj = getRandomInsult();
-    insult.textContent = insultObj.insult;
-    play.textContent = insultObj.play;
+    if (insults.length > 0) {
+        const randomIndex = Math.floor(Math.random() * insults.length); // Väljer index från arrayen
+        const insultObj = insults[randomIndex]; // Hämta insult från insults baserat på indexet
+        insult.textContent = insultObj.insult;
+        play.textContent = insultObj.play;
+        insults.splice(randomIndex, 1);
+    }
+    // Om alla insults visats, återställ insults-arrayen
+    if (insults.length === 0) {
+        insults = [...copiedInsults];
+        console.log("Alla förolämpningar visades, arrayen har återställts: ", insults);
+    }
 }
 // Lyssna på knapptryck för att slumpa en ny förolämpning
 const button = document.getElementById("insultButton");
 button.addEventListener("click", displayRandomInsult);
+/* Visar den slumpmässiga förolämpningen på sidan utan LevelUp
+
+function displayRandomInsult(): void {
+  const insultObj = getRandomInsult();
+
+  insult.textContent = insultObj.insult;
+  play.textContent = insultObj.play;
+} */
