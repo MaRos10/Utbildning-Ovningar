@@ -56,7 +56,7 @@ const insult = document.getElementById("insult") as HTMLElement;
 const play = document.getElementById("play") as HTMLElement;
 
 // Funktion som slumpmässigt väljer en förolämpning
-function getRandomInsult() {
+function getRandomInsult(): { insult: string; play: string } {
   const randomInsult = insults[Math.floor(Math.random() * insults.length - 1)];
   return randomInsult;
 }
