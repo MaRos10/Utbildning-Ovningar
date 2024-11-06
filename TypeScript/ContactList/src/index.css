@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem 0rem;
+  color: rgb(22, 22, 137);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  padding: 0.7rem;
+  margin: 0.2rem 0rem;
+  background-color: rgb(167, 212, 223);
+  border: none;
+  border-radius: 7px;
+  width: 250px;
+}
+
+.addContactBtn {
+  margin: 2rem 0rem;
+  padding: 0.6rem 0.9rem;
+  background-color: rgb(22, 22, 137);
+  color: rgb(236, 242, 242);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.deleteContactBtn {
+  border: none;
+  margin-left: 0.5rem;
+  color: brown;
+  background-color: transparent;
+  cursor: pointer;
+}
