@@ -31,7 +31,8 @@ input {
   width: 250px;
 }
 
-.addContactBtn {
+.addContactBtn,
+.saveBtn {
   margin: 2rem 0rem;
   padding: 0.6rem 0.9rem;
   background-color: rgb(22, 22, 137);
@@ -47,4 +48,18 @@ input {
   color: brown;
   background-color: transparent;
   cursor: pointer;
+}
+
+.editContactBtn {
+  border: none;
+  margin-left: 0.5rem;
+  color: rgb(14, 73, 112);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

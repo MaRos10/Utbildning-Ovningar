@@ -4,7 +4,7 @@ interface ContactListProps {
   contacts: Contact[];
   // Funktioner som skickas som props till ContactList
   deleteContact: (id: number) => void;
-  editContact: (id: number) => void;
+  editContact: (contact: Contact) => void;
 }
 
 function ContactList(props: ContactListProps) {
@@ -12,8 +12,8 @@ function ContactList(props: ContactListProps) {
     props.deleteContact(id);
   }
 
-  function handleEdit(id: number) {
-    props.editContact(id);
+  function handleEdit(contact: Contact) {
+    props.editContact(contact);
   }
 
   return (
@@ -24,18 +24,18 @@ function ContactList(props: ContactListProps) {
           <span>
             {contact.name} - {contact.phone} - {contact.email}
           </span>
-          {/* Anropar handleDelete och skickar kontaktens id som argument för att ta bort kontakten */}
+          {/* Anropar resp funktion och skickar kontaktens id som argument för att ändra/ta bort kontakten */}
+          <button
+            className="editContactBtn"
+            onClick={() => handleEdit(contact)}
+          >
+            Edit
+          </button>
           <button
             className="deleteContactBtn"
             onClick={() => handleDelete(contact.id)}
           >
             Delete
-          </button>
-          <button
-            className="editContactBtn"
-            onClick={() => handleEdit(contact.id)}
-          >
-            Edit
           </button>
         </li>
       ))}

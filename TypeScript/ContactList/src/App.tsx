@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ContactList from "./components/ContactList";
+import EditContactForm from "./components/EditContact";
 import "./index.css";
 import { Contact } from "./types/types";
 
@@ -9,6 +10,7 @@ function App() {
   const [newContactPhone, setNewContactPhone] = useState<string>("");
   const [newContactEmail, setNewContactEmail] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
+  const [editingContact, setEditingContact] = useState<Contact | null>(null);
 
   const addContact = () => {
     // Validera email
@@ -48,6 +50,7 @@ function App() {
         contact.id === updatedContact.id ? updatedContact : contact
       )
     );
+    setEditingContact(null);
   }
 
   // Ta bort kontakt
@@ -59,33 +62,41 @@ function App() {
     <main>
       <h1>Contact List</h1>
       <section className="contactList">
-        <input
-          type="text"
-          placeholder="Name"
-          value={newContactName}
-          onChange={(e) => setNewContactName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Phone"
-          value={newContactPhone}
-          onChange={(e) => setNewContactPhone(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          value={newContactEmail}
-          onChange={(e) => setNewContactEmail(e.target.value)}
-        />
-        {emailError && <p style={{ color: "red" }}>{emailError}</p>}
-        <button className="addContactBtn" onClick={addContact}>
-          Add Contact
-        </button>
-        <ContactList
-          contacts={contacts}
-          deleteContact={deleteContact}
-          editContact={editContact}
-        />
+        {/* Visa redigeringsformulär om editingContact är satt */}
+        {editingContact ? (
+          <EditContactForm contact={editingContact} saveContact={editContact} />
+        ) : (
+          // Annars visa listan med kontakter och formulär för att lägga till nya kontakter
+          <>
+            <input
+              type="text"
+              placeholder="Name"
+              value={newContactName}
+              onChange={(e) => setNewContactName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Phone"
+              value={newContactPhone}
+              onChange={(e) => setNewContactPhone(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              value={newContactEmail}
+              onChange={(e) => setNewContactEmail(e.target.value)}
+            />
+            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+            <button className="addContactBtn" onClick={addContact}>
+              Add Contact
+            </button>
+            <ContactList
+              contacts={contacts}
+              deleteContact={deleteContact}
+              editContact={(contact) => setEditingContact(contact)} // Sätt kontakt för redigering
+            />
+          </>
+        )}
       </section>
     </main>
   );

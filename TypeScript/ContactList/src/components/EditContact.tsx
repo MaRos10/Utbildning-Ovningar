@@ -21,20 +21,29 @@ function EditContactForm({ contact, saveContact }: EditContactFormProps) {
   }
 
   return (
-    <div>
-      <input
-        value={editedName}
-        onChange={(e) => setEditedName(e.target.value)}
-      />
-      <input
-        value={editedPhone}
-        onChange={(e) => setEditedPhone(e.target.value)}
-      />
-      <input
-        value={editedEmail}
-        onChange={(e) => setEditedEmail(e.target.value)}
-      />
-      <button onClick={handleSave}>Save</button>
+    <div className="editFormWrapper">
+      <section className="editForm">
+        <input
+          value={editedName}
+          placeholder="Name"
+          onChange={(e) => setEditedName(e.target.value)}
+        />
+        <input
+          value={editedPhone}
+          placeholder="Phone"
+          onChange={(e) => setEditedPhone(e.target.value)}
+        />
+        <input
+          value={editedEmail}
+          placeholder="Email"
+          onChange={(e) => setEditedEmail(e.target.value)}
+        />
+        <button className="saveBtn" onClick={handleSave}>
+          Save
+        </button>
+      </section>
     </div>
   );
 }
+
+export default EditContactForm;
