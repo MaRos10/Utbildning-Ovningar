@@ -11,6 +11,7 @@ function App() {
   const [newContactEmail, setNewContactEmail] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
   const [editingContact, setEditingContact] = useState<Contact | null>(null);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const addContact = () => {
     // Validera email
@@ -61,6 +62,15 @@ function App() {
   return (
     <main>
       <h1>Contact List</h1>
+      <article className="filterWrapper">
+        <input
+          className="filterInput"
+          type="text"
+          placeholder="Search contacts"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </article>
       <section className="contactList">
         {/* Visa redigeringsformulär om editingContact är satt */}
         {editingContact ? (
@@ -91,7 +101,9 @@ function App() {
               Add Contact
             </button>
             <ContactList
-              contacts={contacts}
+              contacts={contacts.filter((contact) =>
+                contact.name.toLowerCase().includes(searchTerm.toLowerCase())
+              )}
               deleteContact={deleteContact}
               editContact={(contact) => setEditingContact(contact)} // Sätt kontakt för redigering
             />
