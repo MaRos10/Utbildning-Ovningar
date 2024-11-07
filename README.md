@@ -27,3 +27,5 @@
 *ShakespeareInsultGenerator* - Visar slumpmässigt förolämpningar från medeltida pjäser. Användaren kan klicka på en knapp för att se en ny förolämpning, och när alla förolämpningar har visats, återställs listan så att användaren kan börja om
 
 *MemoryGame* - Ett memoryspel byggt med TypeScript, HTML och CSS
+
+*ContactList* - En React-applikation där användaren kan hantera en lista över kontakter med namn, telefonnummer och e-postadress. Användaren kan lägga till nya kontakter, redigera befintliga och ta bort kontakter från listan.   
