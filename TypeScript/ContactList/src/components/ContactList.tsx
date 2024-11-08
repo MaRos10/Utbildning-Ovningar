@@ -21,8 +21,9 @@ function ContactList(props: ContactListProps) {
       {props.contacts.map((contact) => (
         /* contact.id används som unik nyckel för varje listobjekt */
         <li key={contact.id}>
-          <span>
-            {contact.name} - {contact.phone} - {contact.email}
+          <div className="contact"></div>
+          <span className="contactInput">
+            {contact.name} • {contact.phone} • {contact.email}
           </span>
           {/* Anropar resp funktion och skickar kontaktens id som argument för att ändra/ta bort kontakten */}
           <button

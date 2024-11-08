@@ -29,6 +29,7 @@ input {
   border: none;
   border-radius: 7px;
   width: 250px;
+  /* text-indent: 5px; */
 }
 
 .filterWrapper {
